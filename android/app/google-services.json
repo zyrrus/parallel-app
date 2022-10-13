@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "49833848312",
+    "project_id": "parallel-315a9",
+    "storage_bucket": "parallel-315a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49833848312:android:de3173b01d1586d4a0fa0d",
+        "android_client_info": {
+          "package_name": "com.example.parallel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49833848312-bmeto79eblsfoi0mdf7tibc42i3kbvgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8tYXUqtoCsb4YuYeROh_SmWYj5qHsPEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49833848312-bmeto79eblsfoi0mdf7tibc42i3kbvgt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "49833848312-6br0fecsnu6t46rvlefffabup9hmq9nr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.parallel"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
