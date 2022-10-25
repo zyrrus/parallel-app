@@ -3,12 +3,13 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:parallel/pages/core/core_page.dart';
+import 'package:parallel/theme.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:parallel/pages/main_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,8 +24,27 @@ void main() async {
     _configureFirebaseFirestore();
   }
 
-  runApp(const MyApp());
+  runApp(const ParallelApp());
 }
+
+class ParallelApp extends StatelessWidget {
+  const ParallelApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      themeMode: ThemeMode.dark,
+      debugShowCheckedModeBanner: false,
+      theme: Theme.of(context).copyWith(
+        scaffoldBackgroundColor: Parallel.colors.background,
+        bottomAppBarColor: Parallel.colors.background.withOpacity(0.8),
+      ),
+      home: CorePage(),
+    );
+  }
+}
+
+// === Firebase Emulator =======================================================
 
 Future<void> _configureFirebaseAuth() async {
   String configHost = const String.fromEnvironment("FIREBASE_EMU_URL");
@@ -62,16 +82,4 @@ void _configureFirebaseFirestore() {
     persistenceEnabled: false,
   );
   debugPrint('Using Firebase Firestore emulator on: $host:$port');
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MainPage(),
-    );
-  }
 }

@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "parallel-315a9"
-  }
+    "default": "parallel-315a9",
+    "parallel": "parallel-315a9"
+  },
+  "targets": {},
+  "etags": {}
 }
