@@ -17,6 +17,7 @@ dependencies:
     firebase_storage:
     firebase_auth:
     cloud_firestore:
+    sticky_headers: ^0.3.0
 
 dev_dependencies:
     flutter_test:

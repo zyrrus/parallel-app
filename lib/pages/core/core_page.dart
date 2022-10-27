@@ -13,15 +13,13 @@ class CorePage extends StatefulWidget {
 }
 
 class _CorePageState extends State<CorePage> {
+  bool isAuthenticated = true; // TODO: temporary
+  int _selectedPageIndex = 0;
   final List<Widget> _pages = [
     DiscoverPage(),
     ExplorePage(),
     ProfilePage(),
   ];
-
-  int _selectedPageIndex = 0;
-
-  bool isAuthenticated = true; // TODO: temporary
 
   void changePage(int i) {
     setState(() {
@@ -37,9 +35,14 @@ class _CorePageState extends State<CorePage> {
               selectedIndex: _selectedPageIndex,
               onTap: changePage,
             ),
-            body: IndexedStack(
-              index: _selectedPageIndex,
-              children: _pages,
+            body: SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(12.0, 20.0, 12.0, 0.0),
+                child: IndexedStack(
+                  index: _selectedPageIndex,
+                  children: _pages,
+                ),
+              ),
             ),
           )
         : TestPage(); // TODO: LoginPage
