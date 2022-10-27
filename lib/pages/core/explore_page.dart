@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:parallel/widgets/box.dart';
-import 'package:parallel/widgets/text.dart';
-import 'package:parallel/widgets/item_carousel.dart';
-import 'package:parallel/widgets/search_bar.dart';
+import 'package:parallel/widgets/display/box.dart';
+import 'package:parallel/widgets/form/text.dart';
+import 'package:parallel/widgets/layout/item_carousel.dart';
+import 'package:parallel/widgets/form/search_bar.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 
 // https://pub.dev/packages/sticky_headers
@@ -37,22 +37,10 @@ class ExplorePage extends StatelessWidget {
                 content: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 40),
+                    SizedBox(height: 20),
                     PText("Featured Profiles", level: 3),
                     SizedBox(height: 20),
-                    ItemCarousel(
-                      height: 150,
-                      children: const [
-                        Box(width: 150, height: 150),
-                        Box(width: 150, height: 150),
-                        Box(width: 150, height: 150),
-                        Box(width: 150, height: 150),
-                        Box(width: 150, height: 150),
-                        Box(width: 150, height: 150),
-                        Box(width: 150, height: 150),
-                        Box(width: 150, height: 150),
-                      ],
-                    ),
+                    ItemCarousel(height: 150),
                     SizedBox(height: 40),
                     PText("Popular Profiles", level: 3),
                     SizedBox(height: 20),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:parallel/pages/core/discover_page.dart';
 import 'package:parallel/pages/core/explore_page.dart';
 import 'package:parallel/pages/core/profile_page.dart';
-import 'package:parallel/pages/test_page.dart';
-import 'package:parallel/widgets/bottom_tab_navigator.dart';
+import 'package:parallel/pages/temp/test_page.dart';
+import 'package:parallel/widgets/layout/bottom_tab_navigator.dart';
 
 class CorePage extends StatefulWidget {
   const CorePage({super.key});

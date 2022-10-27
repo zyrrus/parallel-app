@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parallel/widgets/text.dart';
+import 'package:parallel/widgets/form/text.dart';
 
 class TestPage extends StatefulWidget {
   const TestPage({super.key});

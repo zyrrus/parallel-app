@@ -1,11 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:parallel/theme.dart';
-import 'package:parallel/widgets/box.dart';
-import 'package:parallel/widgets/text.dart';
-import 'package:parallel/widgets/item_carousel.dart';
+import 'package:parallel/widgets/display/box.dart';
+import 'package:parallel/widgets/form/text.dart';
+import 'package:parallel/widgets/layout/item_carousel.dart';
 
 /* DISCOVER PAGE
     This is where completed projects will be featured. Popular projects 
@@ -31,19 +29,7 @@ class DiscoverPage extends StatelessWidget {
               PText("Featured Projects", level: 3),
               SizedBox(height: 20),
               // Paid featured projects
-              ItemCarousel(
-                height: 150,
-                children: const [
-                  Box(width: 150, height: 150),
-                  Box(width: 150, height: 150),
-                  Box(width: 150, height: 150),
-                  Box(width: 150, height: 150),
-                  Box(width: 150, height: 150),
-                  Box(width: 150, height: 150),
-                  Box(width: 150, height: 150),
-                  Box(width: 150, height: 150),
-                ],
-              ),
+              ItemCarousel(height: 150),
               SizedBox(height: 40),
               PText("Popular Projects", level: 3),
               SizedBox(height: 20),

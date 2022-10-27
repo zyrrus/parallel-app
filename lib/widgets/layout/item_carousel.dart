@@ -1,11 +1,12 @@
 import 'package:flutter/widgets.dart';
-import 'package:parallel/widgets/box.dart';
+import 'package:parallel/widgets/display/box.dart';
+
+// TODO: Convert to circular pageview
 
 class ItemCarousel extends StatelessWidget {
-  final List<Widget> children;
   final double height;
 
-  const ItemCarousel({super.key, required this.children, required this.height});
+  const ItemCarousel({super.key, required this.height});
 
   @override
   Widget build(BuildContext context) {
