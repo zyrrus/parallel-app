@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:parallel/theme.dart';
 import 'package:parallel/widgets/display/box.dart';
-import 'package:parallel/widgets/form/text.dart';
 import 'package:parallel/widgets/layout/item_carousel.dart';
 import 'package:parallel/widgets/form/search_bar.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
@@ -30,7 +30,7 @@ class ExplorePage extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.vertical,
             children: [
-              PText("Explore", level: 1),
+              Text("Explore", style: Parallel.textStyles.h1()),
               SizedBox(height: 20),
               StickyHeader(
                 header: SearchBar(),
@@ -38,11 +38,11 @@ class ExplorePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 20),
-                    PText("Featured Profiles", level: 3),
+                    Text("Featured Profiles", style: Parallel.textStyles.h3()),
                     SizedBox(height: 20),
                     ItemCarousel(height: 150),
                     SizedBox(height: 40),
-                    PText("Popular Profiles", level: 3),
+                    Text("Popular Profiles", style: Parallel.textStyles.h3()),
                     SizedBox(height: 20),
                     // Organically featured projects
                     Column(

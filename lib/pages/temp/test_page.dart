@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parallel/widgets/form/text.dart';
+import 'package:parallel/theme.dart';
 
 class TestPage extends StatefulWidget {
   const TestPage({super.key});
@@ -16,14 +16,14 @@ class _TestPageState extends State<TestPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            PText("Header 1", level: 1),
-            PText("This is body text"),
-            PText("Header 2", level: 2),
-            PText("This is body text"),
-            PText("Header 3", level: 3),
-            PText("This is body text"),
-            PText("Header 4", level: 4),
-            PText("This is body text"),
+            Text("Header 1", style: Parallel.textStyles.h1()),
+            Text("This is body text", style: Parallel.textStyles.p()),
+            Text("Header 2", style: Parallel.textStyles.h2()),
+            Text("This is body text", style: Parallel.textStyles.p()),
+            Text("Header 3", style: Parallel.textStyles.h3()),
+            Text("This is body text", style: Parallel.textStyles.p()),
+            Text("Header 4", style: Parallel.textStyles.h4()),
+            Text("This is body text", style: Parallel.textStyles.p()),
           ],
         ),
       ),

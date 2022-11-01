@@ -1,18 +1,18 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:parallel/theme.dart';
 import 'package:parallel/widgets/display/box.dart';
-import 'package:parallel/widgets/form/text.dart';
 import 'package:parallel/widgets/layout/item_carousel.dart';
 
-/* DISCOVER PAGE
+/* SHOWCASE PAGE
     This is where completed projects will be featured. Popular projects 
     (determined by youtube success) will make their way to the top of this page.
     Users can also pay to advertise their completed projects.
 */
 
-class DiscoverPage extends StatelessWidget {
-  const DiscoverPage({super.key});
+class ShowcasePage extends StatelessWidget {
+  const ShowcasePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +24,14 @@ class DiscoverPage extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.vertical,
             children: [
-              PText("Discover", level: 1),
+              Text("Showcase", style: Parallel.textStyles.h1()),
               SizedBox(height: 20),
-              PText("Featured Projects", level: 3),
+              Text("Featured Projects", style: Parallel.textStyles.h3()),
               SizedBox(height: 20),
               // Paid featured projects
               ItemCarousel(height: 150),
               SizedBox(height: 40),
-              PText("Popular Projects", level: 3),
+              Text("Popular Projects", style: Parallel.textStyles.h3()),
               SizedBox(height: 20),
               // Organically featured projects
               Column(

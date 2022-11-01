@@ -25,7 +25,7 @@ class BottomNavigator extends StatelessWidget {
       onTap: onTap,
       items: [
         navItem(Icons.explore),
-        navItem(Icons.search),
+        navItem(Icons.local_play_sharp), // TODO: find a better icon
         navItem(Icons.person),
       ],
     );

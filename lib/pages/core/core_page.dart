@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parallel/pages/core/discover_page.dart';
+import 'package:parallel/pages/core/showcase_page.dart';
 import 'package:parallel/pages/core/explore_page.dart';
 import 'package:parallel/pages/core/profile_page.dart';
 import 'package:parallel/pages/temp/test_page.dart';
@@ -15,9 +15,9 @@ class CorePage extends StatefulWidget {
 class _CorePageState extends State<CorePage> {
   bool isAuthenticated = true; // TODO: temporary
   int _selectedPageIndex = 0;
-  final List<Widget> _pages = [
-    DiscoverPage(),
+  final List<Widget> _pages = const [
     ExplorePage(),
+    ShowcasePage(),
     ProfilePage(),
   ];
 
